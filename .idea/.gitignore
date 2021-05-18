@@ -11,4 +11,5 @@ target/
 log/
 *.iws
 /out/
+.DS_Store
 
