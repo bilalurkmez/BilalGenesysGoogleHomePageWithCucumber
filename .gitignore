@@ -11,3 +11,4 @@ log/
 *.iws
 /out/
 .DS_Store
+.idea
