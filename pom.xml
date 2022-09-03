@@ -69,5 +69,22 @@
 
 
     </dependencies>
-
+    <pluginExecutor>
+    <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-resources-plugin</artifactId>
+        <version>3.2.0</version>
+    </plugin>
+    </pluginExecutor>
+    <goal>copy-resources</goal>
+    <configuration>
+        <outputDirectory>${project.build.outputDirectory}/${item}/</outputDirectory>
+        <resources>
+            <resource>
+                <directory>${project.basedir}/config/resources/templates</directory>
+                <filtering>false</filtering>
+                <include>application.properties</include>
+            </resource>
+        </resources>
+    </configuration>
 </project>
