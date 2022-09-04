@@ -23,6 +23,7 @@ public class Driver {
             if ("chrome".equals(browser)) {
                 WebDriverManager.chromedriver().setup();
                 ChromeOptions options = new ChromeOptions();
+                options.setHeadless(true);
                 options.addArguments("--disable-dev-shm-usage");
                 options.addArguments("--no-sandbox");
                 driver = new ChromeDriver(options);
@@ -32,6 +33,7 @@ public class Driver {
             } else {
                 WebDriverManager.chromedriver().setup();
                 ChromeOptions options = new ChromeOptions();
+                options.setHeadless(true);
                 options.addArguments("--disable-dev-shm-usage");
                 options.addArguments("--no-sandbox");
                 driver = new ChromeDriver(options);
