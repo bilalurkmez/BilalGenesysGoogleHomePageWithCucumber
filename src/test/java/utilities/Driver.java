@@ -24,6 +24,9 @@ public class Driver {
                 WebDriverManager.chromedriver().setup();
                 ChromeOptions options = new ChromeOptions();
                 //options.setHeadless(true);
+                options.addArguments("start-maximized");
+                options.addArguments("disable-infobars");
+                options.addArguments("--disable-extensions");
                 options.addArguments("--disable-dev-shm-usage");
                 options.addArguments("--no-sandbox");
                 driver = new ChromeDriver(options);
@@ -34,6 +37,9 @@ public class Driver {
                 WebDriverManager.chromedriver().setup();
                 ChromeOptions options = new ChromeOptions();
                 //options.setHeadless(true);
+                options.addArguments("start-maximized");
+                options.addArguments("disable-infobars");
+                options.addArguments("--disable-extensions");
                 options.addArguments("--disable-dev-shm-usage");
                 options.addArguments("--no-sandbox");
                 driver = new ChromeDriver(options);
