@@ -22,27 +22,23 @@ public class Driver {
             String browser = Config.getProperty("browser");
             if ("chrome".equals(browser)) {
                 WebDriverManager.chromedriver().setup();
-                ChromeOptions options = new ChromeOptions();
+//                ChromeOptions options = new ChromeOptions();
                 //options.setHeadless(true);
-                options.addArguments("start-maximized");
-                options.addArguments("disable-infobars");
-                options.addArguments("--disable-extensions");
-                options.addArguments("--disable-dev-shm-usage");
-                options.addArguments("--no-sandbox");
-                driver = new ChromeDriver(options);
+//                options.addArguments("--disable-dev-shm-usage");
+//                options.addArguments("--no-sandbox");
+//                driver = new ChromeDriver(options);
+                driver = new ChromeDriver();
             } else if ("firefox".equals(browser)) {
                 WebDriverManager.firefoxdriver().setup();
                 driver = new FirefoxDriver();
             } else {
                 WebDriverManager.chromedriver().setup();
-                ChromeOptions options = new ChromeOptions();
-                //options.setHeadless(true);
-                options.addArguments("start-maximized");
-                options.addArguments("disable-infobars");
-                options.addArguments("--disable-extensions");
-                options.addArguments("--disable-dev-shm-usage");
-                options.addArguments("--no-sandbox");
-                driver = new ChromeDriver(options);
+//                ChromeOptions options = new ChromeOptions();
+//                //options.setHeadless(true);
+//                options.addArguments("--disable-dev-shm-usage");
+//                options.addArguments("--no-sandbox");
+//                driver = new ChromeDriver(options);
+                driver = new ChromeDriver();
             }
             driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
             driver.manage().window().maximize();
