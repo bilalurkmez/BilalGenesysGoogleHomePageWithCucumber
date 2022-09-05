@@ -21,7 +21,7 @@ public class GoogleHomePage {
     @FindBy (xpath = "//body/div[1]/div[5]/div[1]/div[3]/a[1]")
     public WebElement privacyButton;
 
-    @FindBy (linkText="Privacy Policy")
+    @FindBy (xpath="//header/div[3]/div[1]/div[1]/ul[1]/li[2]/a[1]")
     public WebElement privacyPolicyTab;
 
     @FindBy (xpath = "//div[@id='result-stats']")
