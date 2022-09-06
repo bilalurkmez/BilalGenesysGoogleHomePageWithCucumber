@@ -26,6 +26,7 @@ public class Driver {
  //               System.setProperty("webdriver.chrome.driver","/usr/bin/chromedriver");
                 ChromeOptions options = new ChromeOptions();
                 //options.setHeadless(true);
+                options.addArguments("--disable-setuid-sandbox");
                 options.addArguments("--no-sandbox");
                 options.addArguments("--disable-dev-shm-usage");
                 options.addArguments("ignore-certificate-errors");
@@ -42,6 +43,7 @@ public class Driver {
 //                System.setProperty("webdriver.chrome.driver","/usr/bin/chromedriver");
                 ChromeOptions options = new ChromeOptions();
 //                //options.setHeadless(true);
+                options.addArguments("--disable-setuid-sandbox");
                 options.addArguments("--no-sandbox");
                 options.addArguments("--disable-dev-shm-usage");
                 options.addArguments("ignore-certificate-errors");
