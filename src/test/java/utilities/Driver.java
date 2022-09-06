@@ -25,7 +25,7 @@ public class Driver {
                 WebDriverManager.chromedriver().setup();
  //               System.setProperty("webdriver.chrome.driver","/usr/bin/chromedriver");
                 ChromeOptions options = new ChromeOptions();
-                options.setHeadless(true);
+                //options.setHeadless(true);
                 options.addArguments("--disable-setuid-sandbox");
                 options.addArguments("--no-sandbox");
                 options.addArguments("--disable-dev-shm-usage");
@@ -42,7 +42,7 @@ public class Driver {
                 WebDriverManager.chromedriver().setup();
 //                System.setProperty("webdriver.chrome.driver","/usr/bin/chromedriver");
                 ChromeOptions options = new ChromeOptions();
-                options.setHeadless(true);
+               // options.setHeadless(true);
                 options.addArguments("--disable-setuid-sandbox");
                 options.addArguments("--no-sandbox");
                 options.addArguments("--disable-dev-shm-usage");
