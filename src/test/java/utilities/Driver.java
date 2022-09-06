@@ -6,6 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import java.util.Collections;
 import java.util.concurrent.TimeUnit;
 
 public class Driver {
@@ -27,7 +28,7 @@ public class Driver {
                 options.addArguments("--no-sandbox");
                 options.addArguments("--disable-dev-shm-usage");
                 options.addArguments("start-maximized");
-                options.setExperimentalOption("excludeSwitches", "enable-automation");
+                options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
                 options.setExperimentalOption("useAutomationExtension", false);
                 driver = new ChromeDriver(options);
                // driver = new ChromeDriver();
@@ -42,7 +43,7 @@ public class Driver {
                 options.addArguments("--no-sandbox");
                 options.addArguments("--disable-dev-shm-usage");
                 options.addArguments("start-maximized");
-                options.setExperimentalOption("excludeSwitches", "enable-automation");
+                options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
                 options.setExperimentalOption("useAutomationExtension", false);
                 driver = new ChromeDriver(options);
  //               driver = new ChromeDriver();
