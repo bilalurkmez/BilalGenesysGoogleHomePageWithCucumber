@@ -35,7 +35,7 @@ public class Driver {
                 driver = new FirefoxDriver();
             } else {
   //              WebDriverManager.chromedriver().setup();
-                System.setProperty("webdriver.chrome.driver","/usr/local/bin/chromedriver");
+                System.setProperty("webdriver.chrome.driver","/usr/bin/chromedriver");
                 ChromeOptions options = new ChromeOptions();
 //                //options.setHeadless(true);
                 options.addArguments("--no-sandbox");
