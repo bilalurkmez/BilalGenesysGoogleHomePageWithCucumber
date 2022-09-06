@@ -22,11 +22,12 @@ public class Driver {
         if (driver == null){
             String browser = Config.getProperty("browser");
             if ("chrome".equals(browser)) {
-                WebDriverManager.chromedriver().setup();
+  //              WebDriverManager.chromedriver().setup();
+                System.setProperty("webdriver.chrome.driver","/usr/bin/chromedriver");
                 ChromeOptions options = new ChromeOptions();
                 //options.setHeadless(true);
-                options.addArguments("--no-sandbox");
-                options.addArguments("--disable-dev-shm-usage");
+//                options.addArguments("--no-sandbox");
+//                options.addArguments("--disable-dev-shm-usage");
                 options.addArguments("start-maximized");
                 options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
                 options.setExperimentalOption("useAutomationExtension", false);
@@ -36,12 +37,12 @@ public class Driver {
                 WebDriverManager.firefoxdriver().setup();
                 driver = new FirefoxDriver();
             } else {
-                WebDriverManager.chromedriver().setup();
-  //              System.setProperty("webdriver.chrome.driver","/usr/bin/chromedriver");
+  //              WebDriverManager.chromedriver().setup();
+                System.setProperty("webdriver.chrome.driver","/usr/bin/chromedriver");
                 ChromeOptions options = new ChromeOptions();
 //                //options.setHeadless(true);
-                options.addArguments("--no-sandbox");
-                options.addArguments("--disable-dev-shm-usage");
+//                options.addArguments("--no-sandbox");
+//                options.addArguments("--disable-dev-shm-usage");
                 options.addArguments("start-maximized");
                 options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
                 options.setExperimentalOption("useAutomationExtension", false);
