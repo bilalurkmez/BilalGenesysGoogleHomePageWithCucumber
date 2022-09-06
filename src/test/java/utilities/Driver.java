@@ -24,8 +24,9 @@ public class Driver {
                 WebDriverManager.chromedriver().setup();
                 ChromeOptions options = new ChromeOptions();
                 //options.setHeadless(true);
-//                options.addArguments("--disable-dev-shm-usage");
                 options.addArguments("--no-sandbox");
+                options.addArguments("--disable-dev-shm-usage");
+                options.setExperimentalOption("useAutomationExtension", false);
                 driver = new ChromeDriver(options);
                // driver = new ChromeDriver();
             } else if ("firefox".equals(browser)) {
@@ -35,8 +36,9 @@ public class Driver {
                 WebDriverManager.chromedriver().setup();
                 ChromeOptions options = new ChromeOptions();
 //                //options.setHeadless(true);
-//                options.addArguments("--disable-dev-shm-usage");
                 options.addArguments("--no-sandbox");
+                options.addArguments("--disable-dev-shm-usage");
+                options.setExperimentalOption("useAutomationExtension", false);
                 driver = new ChromeDriver(options);
  //               driver = new ChromeDriver();
             }
